@@ -1,21 +1,22 @@
+#include <stdio.h>
 
-//Program in C to display digits of a natural number in reverse order
+int main(){
 
-#include<stdio.h>
+    int n,i,x;
 
-int main() {
-    int num, reversedNum = 0;
+    printf("Enter n\n");
+    scanf("%d",&n);
 
-    printf("Enter an integer: ");
-    scanf("%d", &num);
+    while (n>9)
+    {
+        x=n%10;
+        printf("%d",x);
 
-    while (num != 0) {
-        int remainder = num % 10;
-        reversedNum = reversedNum * 10 + remainder;
-        num /= 10;
+        n=n/10;
     }
 
-    printf("Reversed number: %d\n", reversedNum);
+    printf("%d",n);
 
     return 0;
+
 }
